@@ -23,6 +23,8 @@ namespace EntityFramework
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<SamoraiBattle>().HasKey(battle => new {battle.BattleId, battle.SamoraiId});
+            modelBuilder.Entity<Samorai>().Property(samorai => samorai.Name).IsRequired().HasMaxLength(50)
+                .HasColumnName("SamoraiName");
             modelBuilder.Entity<Samorai>().ToTable("Samories");
             modelBuilder.Entity<Clan>().ToTable("Clans");
             modelBuilder.Entity<Quote>().ToTable("Quotes");
