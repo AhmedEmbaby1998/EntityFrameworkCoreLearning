@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using Samor;
 
 namespace EntityFramework
@@ -9,6 +10,13 @@ namespace EntityFramework
         public DbSet<Samorai> Samorais { get; set; }
         public DbSet<Quote> Quotes { get; set; }
         public DbSet<Clan> Clans { set; get; }
+
+        private static readonly ILoggerFactory ConsoleLoggetFactory = LoggerFactory.Create(builder =>
+        {
+            builder.AddFilter((s, level) =>
+                s == DbLoggerCategory.Database.Command.Name
+                && level == LogLevel.Information).AddConsole();
+        });
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var connection = new SqlConnectionStringBuilder
@@ -17,7 +25,7 @@ namespace EntityFramework
                 InitialCatalog = "Samorai",
                 IntegratedSecurity = true
             };
-            optionsBuilder.UseSqlServer(connection.ToString());
+            optionsBuilder.UseLoggerFactory(ConsoleLoggetFactory).UseSqlServer(connection.ToString());
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

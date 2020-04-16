@@ -48,3 +48,8 @@ C:\Users\Mr\RiderProjects\EntityFramework\Samor\obj\Debug\netcoreapp3.1\Samor.dl
 C:\Users\Mr\RiderProjects\EntityFramework\Samor\obj\Debug\netcoreapp3.1\Samor.pdb
 C:\Users\Mr\RiderProjects\EntityFramework\Samor\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Mr\RiderProjects\EntityFramework\Samor\bin\Debug\netcoreapp3.1\dotnet-ef.dll
+C:\Users\Mr\RiderProjects\EntityFramework\Samor\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Configuration.dll
+C:\Users\Mr\RiderProjects\EntityFramework\Samor\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Console.dll
+C:\Users\Mr\RiderProjects\EntityFramework\Samor\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\Mr\RiderProjects\EntityFramework\Samor\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+C:\Users\Mr\RiderProjects\EntityFramework\Samor\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
